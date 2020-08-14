@@ -1,0 +1,16 @@
+# 蜜罐配置
+[api]
+apiAddr = "0.0.0.0:8000"
+
+
+[logs]
+errorLog = "error.log"
+infoLog = "info.log"
+debugLog = "debug.log"
+
+[database]
+  dbType = "mysql"
+  dbHost = "127.0.0.1:3306"
+  dbUser = "root"
+  dbPass = ""
+  dbName = "test"
