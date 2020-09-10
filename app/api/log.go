@@ -22,12 +22,12 @@ func (s *Service) LogsHandler(c *gin.Context) (int, interface{}) {
 
 	if s.CheckIfLogExist(data.Level, data.AccessToken) {
 		s.UpdateLog(spLogs)
-		//s.wsSend(s.dataInfo())
+		s.wsSend(s.DataInfo())
 		//log.DoLogs("report")
 		return s.SuccessJSON("")
 	}
 	s.InsertLogFirst(spLogs)
-	//s.wsSend(s.dataInfo())
+	s.wsSend(s.DataInfo())
 
 	//s.updateLog(spLogs)
 	return s.SuccessJSON("")

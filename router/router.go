@@ -22,6 +22,14 @@ func InitRouter(s *Service) *gin.Engine {
 	r.POST("/api/log", func(c *gin.Context) {
 		c.JSON(s.LogsHandler(c))
 	})
+
+	r.GET("/ws", func(c *gin.Context) {
+		s.WsHandler(c)
+	})
+
+	r.GET("/dataInit", func(c *gin.Context) {
+		c.String(200, string(s.DataInfo()))
+	})
 	return r
 
 }

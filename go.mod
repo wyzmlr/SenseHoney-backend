@@ -5,8 +5,8 @@ go 1.14
 require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/aws/aws-sdk-go v1.34.3 // indirect
-	github.com/fatih/color v1.9.0
 	github.com/gin-gonic/gin v1.6.3
+	github.com/gorilla/websocket v1.4.2
 	github.com/jinzhu/configor v1.2.0 // indirect
 	github.com/jinzhu/gorm v1.9.15
 	github.com/panjf2000/ants v1.2.0
